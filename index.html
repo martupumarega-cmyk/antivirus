@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virus en PC y Celular</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="info-page">
+    <header>
+      <h1>Virus en tu PC y Celular</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#tipos">Tipos</a></li>
+          <li><a href="#prevencion">Prevención</a></li>
+          <li><a href="#sintomas">Síntomas</a></li>
+          <li><a href="#comparativos">Comparativos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- QR -->
+    <section id="qr" class="section fade-in center">
+      <h2>Escaneá este código QR</h2>
+      <p>Accedé fácilmente desde tu celular a esta misma página.</p>
+      <img src="" alt="Código QR" class="qr-img" />
+    </section>
+
+    <!-- Inicio -->
+    <section id="inicio" class="section fade-in">
+      <h2>¿Qué son los virus informáticos?</h2>
+      <img src="https://cdn.pixabay.com/photo/2018/05/08/08/27/hacker-3384742_1280.jpg" alt="Hacker" class="hero-img" />
+      <div class="contenido-doble">
+        <div>
+          <p>
+            Un <strong>virus informático</strong> es un programa malicioso diseñado para alterar el funcionamiento normal de un dispositivo. 
+            Se infiltra en los sistemas sin autorización, pudiendo corromper archivos, robar datos o dañar componentes esenciales.
+          </p>
+          <p>
+            Estos programas se replican automáticamente y pueden propagarse por correo electrónico, descargas infectadas, dispositivos USB o redes compartidas.
+          </p>
+        </div>
+        <div>
+          <p>
+            En los <strong>dispositivos móviles</strong>, los virus suelen entrar a través de aplicaciones falsas, enlaces sospechosos o archivos de mensajería. 
+            Aunque son menos frecuentes que en PC, cada año aumentan los casos por el uso masivo de redes sociales y apps de terceros.
+          </p>
+          <p>
+            Los efectos pueden ir desde un simple mal funcionamiento hasta el robo de contraseñas, fotos y datos bancarios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos -->
+    <section id="tipos" class="section fade-in">
+      <h2>Tipos de Virus Más Comunes</h2>
+      <div class="cards">
+        <div class="card"><h3>Troyano</h3><p>Se disfraza de programa legítimo y crea puertas traseras para que el atacante acceda a tu sistema sin permiso.</p></div>
+        <div class="card"><h3>Gusano</h3><p>Se replica sin intervención humana, propagándose por la red y causando saturación o pérdida de datos.</p></div>
+        <div class="card"><h3>Spyware</h3><p>Registra tus acciones, contraseñas, historial de navegación y otra información privada sin que te des cuenta.</p></div>
+        <div class="card"><h3>Ransomware</h3><p>Cifra tus archivos y exige un pago (generalmente en criptomonedas) para recuperarlos.</p></div>
+        <div class="card"><h3>Rootkit</h3><p>Permite al atacante ocultar su presencia en el sistema y mantener control total sin ser detectado.</p></div>
+        <div class="card"><h3>Adware</h3><p>Inunda el sistema con anuncios emergentes y redirige tu navegador a sitios desconocidos.</p></div>
+      </div>
+    </section>
+
+    <!-- Prevención -->
+    <section id="prevencion" class="section fade-in">
+      <h2>Cómo Prevenirlos</h2>
+      <div class="contenido-doble">
+        <div>
+          <ul>
+            <li>Usá software antivirus confiable y mantenelo actualizado.</li>
+            <li>No abras archivos adjuntos de remitentes desconocidos.</li>
+            <li>Evitá descargar programas o apps fuera de tiendas oficiales.</li>
+            <li>Realizá copias de seguridad periódicas.</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Actualizá tu sistema operativo regularmente.</li>
+            <li>No conectes dispositivos USB desconocidos.</li>
+            <li>Utilizá contraseñas seguras y diferentes en cada servicio.</li>
+            <li>Desconfiá de mensajes que pidan datos personales o bancarios.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntomas -->
+    <section id="sintomas" class="section fade-in">
+      <h2>¿Tu dispositivo tiene síntomas de virus?</h2>
+      <p>Seleccioná los síntomas que notás y descubrí el estado de tu sistema:</p>
+      <form id="form-sintomas" class="panel">
+        <div class="grid-sintomas">
+          <label><input type="checkbox" value="lento"> El dispositivo funciona más lento</label>
+          <label><input type="checkbox" value="popups"> Aparecen anuncios o ventanas extrañas</label>
+          <label><input type="checkbox" value="bateria"> La batería dura muy poco</label>
+          <label><input type="checkbox" value="archivos"> Archivos desaparecen o cambian</label>
+          <label><input type="checkbox" value="errores"> El sistema se reinicia o falla</label>
+          <label><input type="checkbox" value="wifi"> La conexión Wi-Fi se comporta de forma rara</label>
+        </div>
+        <button type="button" id="btn-evaluar">Evaluar</button>
+      </form>
+      <p id="resultado"></p>
+    </section>
+
+    <!-- Cuadros comparativos -->
+    <section id="comparativos" class="section fade-in">
+      <h2>Virus en PC vs Virus en Celular</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>PC</th>
+            <th>Celular</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Origen</td>
+            <td>Correos falsos, descargas inseguras, USBs infectados</td>
+            <td>Apps no oficiales, enlaces de mensajería o redes sociales</td>
+          </tr>
+          <tr>
+            <td>Síntomas</td>
+            <td>Rendimiento lento, errores del sistema, archivos dañados</td>
+            <td>Calentamiento, anuncios, consumo excesivo de datos</td>
+          </tr>
+          <tr>
+            <td>Gravedad</td>
+            <td>Alta: puede afectar el sistema operativo completo</td>
+            <td>Media: suele atacar aplicaciones o permisos</td>
+          </tr>
+          <tr>
+            <td>Prevención</td>
+            <td>Antivirus, firewalls, actualizaciones</td>
+            <td>Descargar solo apps oficiales y revisar permisos</td>
+          </tr>
+          <tr>
+            <td>Ejemplo</td>
+            <td>WannaCry, ILoveYou, Zeus</td>
+            <td>FluBot, Joker, XHelper</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <p>© 2025 - Página informativa creada por Martina. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Generar QR dinámico
+    const qrImg = document.querySelector('.qr-img');
+    const url = window.location.href || 'https://example.com';
+    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}`;
+
+    // Evaluación de síntomas
+    document.getElementById('btn-evaluar').addEventListener('click', () => {
+      const seleccionados = document.querySelectorAll('#form-sintomas input:checked').length;
+      const resultado = document.getElementById('resultado');
+      resultado.style.opacity = 0;
+
+      setTimeout(() => {
+        if (seleccionados === 0) {
+          resultado.textContent = "Tu dispositivo parece estar libre de virus. ¡Todo en orden!";
+          resultado.style.color = "#a0ffcc";
+        } else if (seleccionados <= 2) {
+          resultado.textContent = "Podría haber alguna amenaza leve. Te recomendamos escanear tu dispositivo.";
+          resultado.style.color = "#ffff80";
+        } else {
+          resultado.textContent = "Atención: hay varios síntomas de infección. Es muy probable que tu dispositivo tenga un virus.";
+          resultado.style.color = "#ff8080";
+        }
+        resultado.style.opacity = 1;
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
+
+
