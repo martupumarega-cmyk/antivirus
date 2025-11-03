@@ -26,7 +26,11 @@
     <section id="qr" class="section fade-in center">
       <h2>Escaneá este código QR</h2>
       <p>Accedé fácilmente desde tu celular a esta misma página.</p>
-      <img src="" alt="Código QR" class="qr-img" />
+      <img 
+        src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://martupumarega-cmyk.github.io/antivirus/" 
+        alt="Código QR de la página" 
+        class="qr-img" 
+      />
     </section>
 
     <!-- Inicio -->
@@ -155,13 +159,8 @@
     </footer>
   </div>
 
+  <!-- SCRIPT para evaluación -->
   <script>
-    // Generar QR dinámico
-    const qrImg = document.querySelector('.qr-img');
-    const url = window.location.href || 'https://example.com';
-    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}`;
-
-    // Evaluación de síntomas
     document.getElementById('btn-evaluar').addEventListener('click', () => {
       const seleccionados = document.querySelectorAll('#form-sintomas input:checked').length;
       const resultado = document.getElementById('resultado');
@@ -172,7 +171,7 @@
           resultado.textContent = "Tu dispositivo parece estar libre de virus. ¡Todo en orden!";
           resultado.style.color = "#a0ffcc";
         } else if (seleccionados <= 2) {
-          resultado.textContent = "Podría haber alguna amenaza leve. Te recomendamos escanear tu dispositivo.";
+          resultado.textContent = "Podría haber una amenaza leve. Te recomendamos escanear tu dispositivo.";
           resultado.style.color = "#ffff80";
         } else {
           resultado.textContent = "Atención: hay varios síntomas de infección. Es muy probable que tu dispositivo tenga un virus.";
@@ -185,5 +184,7 @@
 
 </body>
 </html>
+
+
 
 
