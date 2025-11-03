@@ -1,0 +1,287 @@
+/* ===== RESETEO GENERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== FONDO Y ESTILO BASE ===== */
+body {
+  background: linear-gradient(135deg, #000, #1a001a, #ff1493);
+  background-size: 200% 200%;
+  animation: move-bg 8s infinite alternate;
+  color: #fff;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+@keyframes move-bg {
+  0% { background-position: left top; }
+  100% { background-position: right bottom; }
+}
+
+/* ===== SECCIONES ===== */
+.section {
+  padding: 50px 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 0, 150, 0.25);
+  animation: fade-in 1s ease;
+}
+
+.section h2 {
+  color: #ff99ff;
+  text-shadow: 0 0 8px #ff33cc;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 0 10px #ff33cc;
+}
+
+header h1 {
+  color: #ff66cc;
+  font-size: 32px;
+  text-shadow: 0 0 10px #ff33cc;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+nav li {
+  margin: 8px 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff66cc;
+}
+
+/* ===== ESTRUCTURAS DE CONTENIDO ===== */
+.contenido-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.contenido-doble p {
+  margin-bottom: 15px;
+}
+
+/* ===== IMAGEN PRINCIPAL ===== */
+.hero-img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px #ff33cc;
+}
+
+/* ===== TARJETAS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ff66cc;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+/* ===== LISTAS ===== */
+ul {
+  list-style: disc;
+  margin-left: 30px;
+  line-height: 1.8;
+}
+
+/* ===== SECCIÓN QR ===== */
+.center {
+  text-align: center;
+}
+
+.qr-img {
+  width: 220px;
+  height: 220px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.3); }
+  50% { box-shadow: 0 0 35px rgba(255, 105, 180, 0.9); }
+  100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.3); }
+}
+
+/* ===== SÍNTOMAS ===== */
+.panel {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ff66cc;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+}
+
+.grid-sintomas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#form-sintomas label {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ff66cc;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#form-sintomas input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #ff66cc;
+}
+
+#form-sintomas label:hover {
+  background: rgba(255, 102, 204, 0.1);
+  box-shadow: 0 0 10px rgba(255, 102, 204, 0.4);
+}
+
+#btn-evaluar {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #ff33cc, #ff66cc);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.5);
+}
+
+#btn-evaluar:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.7);
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-shadow: 0 0 6px #ff33cc;
+  transition: opacity 0.5s ease;
+}
+
+/* ===== TABLA COMPARATIVA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid rgba(255, 102, 204, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 102, 204, 0.3);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid rgba(255, 102, 204, 0.25);
+}
+
+th {
+  background: rgba(255, 51, 204, 0.25);
+  color: #ffb3ff;
+  text-shadow: 0 0 8px #ff33cc;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+tr:hover {
+  background: rgba(255, 102, 204, 0.1);
+  transition: 0.3s;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  background: #000;
+  padding: 25px;
+  color: #ff99ff;
+  box-shadow: 0 0 20px #ff33cc;
+  border-top: 1px solid #ff33cc;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .contenido-doble {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .grid-sintomas {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 24px; }
+  nav ul { flex-direction: column; }
+  .section { padding: 30px 20px; }
+  .qr-img { width: 180px; height: 180px; }
+  th, td { font-size: 14px; padding: 10px; }
+}
+
+
